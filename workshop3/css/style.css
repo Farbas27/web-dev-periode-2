@@ -1,0 +1,20 @@
+#header {
+    background-color: #4a90e2;
+    height: 100px;
+}
+
+#content {
+    background-color: #e6e6e6;
+    min-height: 600px;
+    padding: 20px;
+}
+
+#footer {
+    background-color: #333333;
+    height: 80px;
+    padding: 20px;
+}
+
+#footer a {
+    color: white;
+}
