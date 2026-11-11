@@ -13,7 +13,7 @@
 
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="detail.html">Product</a></li>
+            <li><a href="#" onclick="gaNaarLaatsteProduct()">Product</a></li>
             <li><a href="#footer">Contact</a></li>
         </ul>
 
@@ -26,7 +26,7 @@
             <img src="foto/battlebots Ominous.jpg" alt="Ominous Battlebot">
             <h2>Ominous Battlebot</h2>
             <p>Prijs: €799,99</p>
-            <a href="detail.html">Bekijk</a>
+            <a href="details/ominous.html" onclick="localStorage.setItem('laatsteProduct', this.href)">Bekijk</a>
         </div>
 
         <hr>
@@ -35,7 +35,7 @@
             <img src="foto/Hexapod Robot.jpg" alt="Hexapod Robot">
             <h2>Hexapod Robot</h2>
             <p>Prijs: €299,99</p>
-            <a href="detail.html">Bekijk</a>
+            <a href="details/hexapod.html" onclick="localStorage.setItem('laatsteProduct', this.href)">Bekijk</a>
         </div>
 
         <hr>
@@ -44,7 +44,7 @@
             <img src="foto/Robot Arm.jpg" alt="Robot Arm">
             <h2>Robot Arm</h2>
             <p>Prijs: €199,99</p>
-            <a href="detail.html">Bekijk</a>
+            <a href="details/robotarm.html" onclick="localStorage.setItem('laatsteProduct', this.href)">Bekijk</a>
         </div>
 
         <hr>
@@ -53,7 +53,7 @@
             <img src="foto/Humanoid Robot.jpg" alt="Humanoid Robot">
             <h2>Humanoid Robot</h2>
             <p>Prijs: €1499,99</p>
-            <a href="detail.html">Bekijk</a>
+           <a href="details/humanoid.html" onclick="localStorage.setItem('laatsteProduct', this.href)">Bekijk</a>
         </div>
 
         <hr>
@@ -62,7 +62,7 @@
             <img src="foto/Mars Rover.jpg" alt="Mars Rover">
             <h2>Mars Rover</h2>
             <p>Prijs: €599,99</p>
-            <a href="detail.html">Bekijk</a>
+            <a href="details/Mars Rover.html" onclick="localStorage.setItem('laatsteProduct', this.href)">Bekijk</a>
         </div>
 
         <hr>
@@ -71,7 +71,7 @@
             <img src="foto/drone.jpg" alt="Drone">
             <h2>Drone</h2>
             <p>Prijs: €249,99</p>
-            <a href="detail.html">Bekijk</a>
+            <a href="details/drone.html" onclick="localStorage.setItem('laatsteProduct', this.href)">Bekijk</a>
         </div>
 
     </div>
@@ -84,6 +84,19 @@
             </a>
         </p>
     </footer>
+
+<script>
+function gaNaarLaatsteProduct() {
+    let product = localStorage.getItem("laatsteProduct");
+
+    if (product) {
+        window.location.href = product;
+    } else {
+        alert("Je hebt nog geen product bekeken.");
+    }
+}
+</script>
+
 
 </body>
 </html>
