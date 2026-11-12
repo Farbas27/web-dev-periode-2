@@ -11,6 +11,7 @@
     <div id="header">
         <h1>🤖 Robot Shop</h1>
 
+        <!-- Navigatiemenu -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#" onclick="gaNaarLaatsteProduct()">Product</a></li>
@@ -20,6 +21,12 @@
         <p>De beste robots op één plek.</p>
     </div>
 
+    <!-- Zoekbalk -->
+    <div class="zoek-container">
+    <input type="text" id="zoekbalk" placeholder="Zoek een robot..." onkeyup="zoekProduct()">
+</div>
+
+ <!-- Producten -->
     <div id="content">
 
         <div class="product">
@@ -76,16 +83,18 @@
 
     </div>
 
+    <!-- Link naar GLU -->
     <footer id="footer">
-        <p>&copy; 2026 Robot Shop</p>
-        <p>
-            <a href="https://www.glu.nl" target="_blank">
-                Bezoek de GLU website
-            </a>
-        </p>
-    </footer>
+<p>&copy; 2026 Robot Shop</p>
+<p>
+<a href="https://www.glu.nl" target="_blank">
+Bezoek de GLU website
+</a>
+</p>
+</footer>   
 
 <script>
+    // Naar het laatst bekeken product gaan
 function gaNaarLaatsteProduct() {
     let product = localStorage.getItem("laatsteProduct");
 
@@ -94,6 +103,24 @@ function gaNaarLaatsteProduct() {
     } else {
         alert("Je hebt nog geen product bekeken.");
     }
+}
+
+// Producten zoeken via de zoekbalk
+function zoekProduct() {
+    let invoer = document.getElementById("zoekbalk").value.toLowerCase();
+    let producten = document.querySelectorAll(".product");
+
+    producten.forEach(function(product) {
+        // Productnaam ophalen
+        let naam = product.querySelector("h2").textContent.toLowerCase();
+
+        // Product tonen of verbergen
+        if (naam.includes(invoer)) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
+    });
 }
 </script>
 
