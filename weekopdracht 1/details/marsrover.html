@@ -3,55 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mars Rover</title>
+    <title>Mars Rover - Robot Shop</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <div id="header">
       <h1>🤖 Robot Shop</h1>
-
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li>
-          <a href="../index.html" onclick="gaNaarLaatsteProduct()">Product</a>
-        </li>
+        <li><a href="Mars Rover.html">Product</a></li>
         <li><a href="#footer">Contact</a></li>
       </ul>
     </div>
 
-    <div id="content">
-      <img src="../foto/mars rover.jpg" alt="mars rover" />
+    <div class="detail-container">
+      <img src="../foto/Mars Rover.jpg" alt="Mars Rover" />
 
-      <h2>Mars Rover</h2>
+      <div class="detail-info">
+        <h2>Mars Rover</h2>
+        <p class="prijs">Prijs: €599,99</p>
 
-      <p>Prijs: €599,99</p>
+        <p>
+          Een Mars Rover is een robotvoertuig dat is ontworpen om het oppervlak
+          van Mars te verkennen en wetenschappelijke gegevens te verzamelen.
+        </p>
 
-      <p>
-        Een Mars Rover is een robotvoertuig dat is ontworpen om het oppervlak
-        van Mars te verkennen en wetenschappelijke gegevens te verzamelen.
-      </p>
+        <p>
+          Sinds de jaren negentig zijn meerdere rovers naar Mars gestuurd. Deze
+          robots onderzoeken gesteenten, maken foto's en helpen wetenschappers
+          meer te leren over de geschiedenis van de planeet.
+        </p>
 
-      <p>
-        Sinds de jaren negentig zijn meerdere rovers naar Mars gestuurd. Deze
-        robots onderzoeken gesteenten, maken foto's en helpen wetenschappers
-        meer te leren over de geschiedenis van de planeet.
-      </p>
+        <p>
+          Mars Rovers kunnen zelfstandig rijden en beslissingen nemen over hun
+          route. Daardoor kunnen ze gebieden onderzoeken die voor mensen moeilijk
+          bereikbaar zijn.
+        </p>
 
-      <p>
-        Mars Rovers kunnen zelfstandig rijden en beslissingen nemen over hun
-        route. Daardoor kunnen ze gebieden onderzoeken die voor mensen moeilijk
-        bereikbaar zijn.
-      </p>
-
-      <button>Bestellen</button>
-
-      <br /><br />
-
-      <a href="../index.html">← Terug naar overzicht</a>
+        <div class="detail-acties">
+          <button
+            class="btn-bestellen"
+            onclick="alert('Mars Rover is toegevoegd aan je bestelling!')"
+          >
+            Bestellen
+          </button>
+          <a href="../index.html" class="btn-terug">← Terug naar overzicht</a>
+        </div>
+      </div>
     </div>
 
     <footer id="footer">
-      <p>© 2026 Robot Shop</p>
+      <p>&copy; 2026 Robot Shop</p>
     </footer>
   </body>
 </html>

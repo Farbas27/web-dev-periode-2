@@ -3,56 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Humanoid Robot</title>
+    <title>Humanoid Robot - Robot Shop</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <div id="header">
       <h1>🤖 Robot Shop</h1>
-
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li>
-          <a href="../index.html" onclick="gaNaarLaatsteProduct()">Product</a>
-        </li>
+        <li><a href="humanoid.html">Product</a></li>
         <li><a href="#footer">Contact</a></li>
       </ul>
     </div>
 
-    <div id="content">
-      <img src="../foto/humanoid Robot.jpg" alt="humanoid Robot" />
+    <div class="detail-container">
+      <img src="../foto/Humanoid Robot.jpg" alt="Humanoid Robot" />
 
-      <h2>humanoid Robot</h2>
+      <div class="detail-info">
+        <h2>Humanoid Robot</h2>
+        <p class="prijs">Prijs: €1499,99</p>
 
-      <p>Prijs: €1499,99</p>
+        <p>
+          Een humanoïde robot is ontworpen om op een mens te lijken. Deze robots
+          kunnen lopen, voorwerpen oppakken en samenwerken met mensen bij
+          verschillende taken.
+        </p>
 
-      <p>
-        Een humanoïde robot is ontworpen om op een mens te lijken. Deze robots
-        kunnen lopen, voorwerpen oppakken en samenwerken met mensen bij
-        verschillende taken.
-      </p>
+        <p>
+          De ontwikkeling van humanoïde robots begon tientallen jaren geleden.
+          Onderzoekers wilden robots bouwen die zich konden verplaatsen in
+          dezelfde omgeving als mensen. Bekende voorbeelden zijn ASIMO en Atlas.
+        </p>
 
-      <p>
-        De ontwikkeling van humanoïde robots begon tientallen jaren geleden.
-        Onderzoekers wilden robots bouwen die zich konden verplaatsen in
-        dezelfde omgeving als mensen. Bekende voorbeelden zijn ASIMO en Atlas.
-      </p>
+        <p>
+          Humanoïde robots worden gebruikt voor onderzoek, industrie en
+          huishoudelijke toepassingen. Dankzij sensoren en kunstmatige
+          intelligentie kunnen ze steeds zelfstandiger werken.
+        </p>
 
-      <p>
-        Humanoïde robots worden gebruikt voor onderzoek, industrie en
-        huishoudelijke toepassingen. Dankzij sensoren en kunstmatige
-        intelligentie kunnen ze steeds zelfstandiger werken.
-      </p>
-
-      <button>Bestellen</button>
-
-      <br /><br />
-
-      <a href="../index.html">← Terug naar overzicht</a>
+        <div class="detail-acties">
+          <button
+            class="btn-bestellen"
+            onclick="alert('Humanoid Robot is toegevoegd aan je bestelling!')"
+          >
+            Bestellen
+          </button>
+          <a href="../index.html" class="btn-terug">← Terug naar overzicht</a>
+        </div>
+      </div>
     </div>
 
     <footer id="footer">
-      <p>© 2026 Robot Shop</p>
+      <p>&copy; 2026 Robot Shop</p>
     </footer>
   </body>
 </html>

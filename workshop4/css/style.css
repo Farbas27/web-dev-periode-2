@@ -1,0 +1,103 @@
+/* Zorgt ervoor dat padding meetelt in de totale breedte */
+* {
+    box-sizing: border-box;
+}
+
+/* Algemene opmaak van de pagina zonder witte randen */
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Container die de hele pagina centreert op 960px breedte */
+#container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* Header: donkere balk bovenaan met de titel */
+#header {
+    background-color: #020617;
+    text-align: center;
+    padding: 40px;
+}
+
+#header h1 {
+    color: cyan;
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+
+/* Content: het middengedeelte met alle producten */
+#content {
+    background-color: #1e293b;
+    padding: 30px;
+}
+
+h2 {
+    color: cyan;
+    border-bottom: 2px solid cyan;
+    padding-bottom: 10px;
+}
+
+/* Productblok: kaartje voor elke losse robot */
+.product {
+    background-color: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Afbeeldingen binnen een productblok */
+.product img {
+    width: 100%;
+    max-width: 500px;
+    border: 3px solid cyan;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+.product h3 {
+    color: #60a5fa;
+    font-size: 24px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* Kenmerkenlijst binnen het product */
+ul {
+    background-color: #334155;
+    padding: 15px 35px;
+    border-radius: 10px;
+}
+
+/* Class voor alle prijzen */
+.prijs {
+    color: cyan;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+/* Footer: onderste balk van de webshop */
+#footer {
+    background-color: #020617;
+    text-align: center;
+    padding: 30px;
+}
+
+#footer a {
+    color: cyan;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#footer a:hover {
+    color: white;
+}

@@ -1,59 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ominous Battlebot</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ominous Battlebot - Robot Shop</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
     <div id="header">
-        <h1>🤖 Robot Shop</h1>
-
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-        <li>
-          <a href="../index.html" onclick="gaNaarLaatsteProduct()">Product</a>
-        </li>
-            <li><a href="#footer">Contact</a></li>
-        </ul>
+      <h1>🤖 Robot Shop</h1>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="ominous.html">Product</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
     </div>
 
-    <div id="content">
+    <div class="detail-container">
+      <img src="../foto/battlebots Ominous.jpg" alt="Ominous Battlebot" />
 
-        <img src="../foto/battlebots Ominous.jpg" alt="Ominous Battlebot">
-
+      <div class="detail-info">
         <h2>Ominous Battlebot</h2>
-
-        <p>Prijs: €799,99</p>
+        <p class="prijs">Prijs: €799,99</p>
 
         <p>
-    Ominous is een moderne battlebot die gebouwd is voor robotgevechten.
-    Deze robot combineert snelheid, kracht en een sterk ontwerp om
-    tegenstanders te verslaan in de arena.
-    </p>
-
-    <p>
-    Robotgevechten werden populair in de jaren 90 dankzij programma's
-    zoals Robot Wars en BattleBots. Teams van over de hele wereld bouwen
-    robots met unieke wapens en strategieën. Ominous is een voorbeeld van
-    hoe moderne technologie wordt gebruikt om sterke en betrouwbare
-    wedstrijdrobots te maken.
-    </p> ontwerp om tegenstanders te verslaan in de arena.
+          Ominous is een moderne battlebot die gebouwd is voor robotgevechten.
+          Deze robot combineert snelheid, kracht en een sterk ontwerp om
+          tegenstanders te verslaan in de arena.
         </p>
 
-        <button>Bestellen</button>
+        <p>
+          Robotgevechten werden populair in de jaren 90 dankzij programma's
+          zoals Robot Wars en BattleBots. Teams van over de hele wereld bouwen
+          robots met unieke wapens en strategieën. Ominous is een voorbeeld van
+          hoe moderne technologie wordt gebruikt om sterke en betrouwbare
+          wedstrijdrobots te maken.
+        </p>
 
-        <br><br>
-
-        <a href="../index.html">← Terug naar overzicht</a>
-
+        <div class="detail-acties">
+          <button
+            class="btn-bestellen"
+            onclick="alert('Ominous Battlebot is toegevoegd aan je bestelling!')"
+          >
+            Bestellen
+          </button>
+          <a href="../index.html" class="btn-terug">← Terug naar overzicht</a>
+        </div>
+      </div>
     </div>
 
     <footer id="footer">
-        <p>© 2026 Robot Shop</p>
+      <p>&copy; 2026 Robot Shop</p>
     </footer>
-
-</body>
+  </body>
 </html>

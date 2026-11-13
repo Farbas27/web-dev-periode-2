@@ -1,88 +1,266 @@
+/*  ALGEMENE BASISINSTELLINGEN */
+
+/* Zorgt ervoor dat padding en borders binnen de opgegeven breedte/hoogte blijven */
+* {
+  box-sizing: border-box;
+}
+
+/* Basisstijl voor de gehele pagina */
 body {
-    background-color: #0f172a;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
+  background-color: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
+/* HEADER & NAVIGATIE */
+
+/* Bovenste balk van de website met gecentreerde inhoud */
 #header {
-    background-color: #020617;
-    text-align: center;
-    padding: 40px;
+  background-color: #020617;
+  text-align: center;
+  padding: 40px 20px;
 }
 
+/* Hoofdtitel van de webshop */
 #header h1 {
-    color: cyan;
-    font-size: 48px;
+  color: cyan;
+  font-size: 48px;
+  margin-top: 0;
 }
 
-#content {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 30px;
-    background-color: #1e293b;
-    border-radius: 20px;
+/* Container voor het navigatiemenu */
+#header ul {
+  background-color: #334155;
+  padding: 15px 30px;
+  border-radius: 10px;
+  list-style: none;
+  display: inline-flex;
+  gap: 25px;
+  margin: 10px 0 20px 0;
 }
 
-/* Koppen */
-h2 {
-    color: cyan;
-    border-bottom: 2px solid cyan;
-    padding-bottom: 10px;
+/* Opmaak van de navigatielinks */
+#header ul a {
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.2s;
 }
 
-h3 {
-    color: #60a5fa;
+/* Kleur en onderstreping wanneer je met de muis over een link gaat of klikt */
+#header ul a:hover,
+#header ul a:active {
+  color: white;
+  text-decoration: underline;
 }
 
-img {
-    width: 100%;
-    max-width: 700px;
-    border: 3px solid cyan;
-    border-radius: 15px;
-    display: block;
-    margin: auto;
-}
-
-p {
-    line-height: 1.8;
-}
-
-/* Lijsten */
-ul {
-    background-color: #334155;
-    padding: 20px 40px;
-    border-radius: 10px;
-}
-
-hr {
-    border: 1px solid #475569;
-    margin: 40px 0;
-}
+/* ZOEKBALK */
 
 .zoek-container {
-text-align: center;
-margin: 20px;
+  text-align: center;
+  margin: 25px 20px;
 }
 
+/* Stijl van het zoekveld zelf */
 #zoekbalk {
-width: 300px;
-padding: 10px;
-font-size: 16px;
+  width: 100%;
+  max-width: 350px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid cyan;
+  background-color: #1e293b;
+  color: white;
 }
 
+/* WEBSHOP GRID */
+
+/* Hoofdcontainer die producten automatisch in responsieve kolommen plaatst */
+#content {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #1e293b;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* PRODUCTKAARTEN */
+
+/* Individuele productkaart */
+.product {
+  background-color: #0f172a;
+  border: 1px solid #475569;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Productafbeelding */
+.product img {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+/* Producttitel */
+.product h2 {
+  color: cyan;
+  font-size: 22px;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+  margin: 10px 0;
+}
+
+/* Algemene beschrijvingstekst binnen een productkaart */
+.product p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
+}
+
+/* Bekijk knop */
+.product a {
+  display: inline-block;
+  background-color: cyan;
+  color: #020617;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Kleurverandering van muis knop */
+.product a:hover {
+  background-color: #60a5fa;
+  color: white;
+}
+
+/* Klik effect waardoor de knop heel licht indrukt */
+.product a:active {
+  background-color: white;
+  color: #020617;
+  transform: scale(0.97);
+}
+
+/* Opmaak voor de prijsweergave */
+.prijs {
+  color: cyan;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+
+/* FOOTER */
+
+/* Onderste balk van de website */
 #footer {
-    background-color: #020617;
-    text-align: center;
-    padding: 30px;
+  background-color: #020617;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
 }
 
+/* Links in de footer */
 #footer a {
-    color: cyan;
-    text-decoration: none;
-    font-size: 20px;
+  color: cyan;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-#footer a:hover {
-    color: white;
+/* Hover- en klikstijl voor links in de footer */
+#footer a:hover,
+#footer a:active {
+  color: white;
+  text-decoration: underline;
+}
+
+/* DETAILPAGINA */
+
+.detail-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #1e293b;
+  border-radius: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.detail-container img {
+  width: 100%;
+  max-width: 380px;
+  border: 2px solid cyan;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.detail-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.detail-info h2 {
+  color: cyan;
+  font-size: 32px;
+  margin-top: 0;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 10px;
+}
+
+.detail-info p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.detail-acties {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-bestellen {
+  background-color: cyan;
+  color: #020617;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-bestellen:hover {
+  background-color: #60a5fa;
+  color: white;
+}
+
+.btn-terug {
+  color: cyan;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 15px;
+}
+
+.btn-terug:hover {
+  color: white;
+  text-decoration: underline;
 }
