@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "../base-docker-xampp"
+		},
+		{
+			"path": "../weekopdracht 1"
+		},
+		{
+			"path": "../workshop1"
+		},
+		{
+			"path": "../workshop2"
+		},
+		{
+			"path": "../workshop3"
+		},
+		{
+			"path": "../workshop4"
+		},
+		{
+			"path": "../workshop5"
+		},
+		{
+			"path": "../workshop6"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "workshop7"
+	}
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Humanoid Robot - Robot Shop</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>🤖 Robot Shop</h1>
+      <ul>
+        <li><a href="../index.php">Home</a></li>
+        <li><a href="humanoid.php">Product</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="detail-container">
+      <img src="../foto/Humanoid Robot.jpg" alt="Humanoid Robot" />
+
+      <div class="detail-info">
+        <h2>Humanoid Robot</h2>
+        <p class="prijs">Prijs: €1499,99</p>
+
+        <p>
+          Een humanoïde robot is ontworpen om op een mens te lijken. Deze robots
+          kunnen lopen, voorwerpen oppakken en samenwerken met mensen bij
+          verschillende taken.
+        </p>
+
+        <p>
+          De ontwikkeling van humanoïde robots begon tientallen jaren geleden.
+          Onderzoekers wilden robots bouwen die zich konden verplaatsen in
+          dezelfde omgeving als mensen. Bekende voorbeelden zijn ASIMO en Atlas.
+        </p>
+
+        <p>
+          Humanoïde robots worden gebruikt voor onderzoek, industrie en
+          huishoudelijke toepassingen. Dankzij sensoren en kunstmatige
+          intelligentie kunnen ze steeds zelfstandiger werken.
+        </p>
+        <div class="detail-acties">
+          <a href="../bestellen.php" class="btn-bestellen">Bestellen</a>
+          <a href="../index.php" class="btn-terug">← Terug naar overzicht</a>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <p>&copy; 2026 Robot Shop</p>
+    </footer>
+  </body>
+</html>

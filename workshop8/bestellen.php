@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bestellen - Robot Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <h1>🤖 Robot Shop</h1>
+      <ul>
+        <li><a href="index.php">Home</a></li>
+        <li><a href="bestellen.php">Bestellen</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <p>Plaats hier jouw robotbestelling.</p>
+    </div>
+
+    <div class="detail-container">
+      <div class="detail-info">
+        <h2>Bestellen: Robot Shop</h2>
+
+        <form class="formulier">
+          <!-- Kies een robot -->
+          <div class="veld">
+            <label for="robot">Kies je robot</label>
+            <select id="robot" name="robot">
+              <option value="ominous">Ominous Battlebot (€799,99)</option>
+              <option value="hexapod">Hexapod Robot (€299,99)</option>
+              <option value="robotarm" selected>Robot Arm (€199,99)</option>
+              <option value="humanoid">Humanoid Robot (€1499,99)</option>
+              <option value="marsrover">Mars Rover (€599,99)</option>
+              <option value="drone">Drone (€249,99)</option>
+            </select>
+          </div>
+
+          <!-- Aantal -->
+          <div class="veld">
+            <label for="aantal">Aantal</label>
+            <input
+              type="number"
+              id="aantal"
+              name="aantal"
+              min="1"
+              max="10"
+              value="1"
+              required
+            />
+          </div>
+
+          <!-- Extra optie passend bij robots -->
+          <div class="veld">
+            <label for="uitvoering">Kleur / Uitvoering</label>
+            <select id="uitvoering" name="uitvoering">
+              <option value="zwart">Mat Zwart</option>
+              <option value="zilver">Cyber Zilver</option>
+              <option value="cyaan">Neon Cyaan</option>
+            </select>
+          </div>
+
+          <!-- Klantgegevens -->
+          <div class="veld">
+            <label for="voornaam">Voornaam</label>
+            <input
+              type="text"
+              id="voornaam"
+              name="voornaam"
+              placeholder="Bijvoorbeeld: Sanne"
+              required
+            />
+          </div>
+
+          <div class="veld">
+            <label for="achternaam">Achternaam</label>
+            <input type="text" id="achternaam" name="achternaam" required />
+          </div>
+
+          <div class="veld">
+            <label for="email">E-mailadres</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="naam@voorbeeld.nl"
+              required
+            />
+          </div>
+
+          <div class="veld">
+            <label for="opmerking">Opmerkingen (optioneel)</label>
+            <textarea
+              id="opmerking"
+              name="opmerking"
+              rows="3"
+              placeholder="Bijvoorbeeld: graafarm extra monteren..."
+            ></textarea>
+          </div>
+
+          <!-- Voorwaarden -->
+          <div class="veld vinkje">
+            <input
+              type="checkbox"
+              id="voorwaarden"
+              name="voorwaarden"
+              required
+            />
+            <label for="voorwaarden"
+              >Ik ga akkoord met de algemene voorwaarden</label
+            >
+          </div>
+
+          <!-- Verzendknop -->
+          <input
+            type="submit"
+            value="Bestelling plaatsen"
+            class="btn-bestellen knop"
+          />
+        </form>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <p>&copy; 2026 Robot Shop</p>
+      <p><a href="https://glu.nl" target="_blank">Bezoek de GLU website</a></p>
+    </footer>
+  </body>
+</html>
