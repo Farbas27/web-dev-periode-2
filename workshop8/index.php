@@ -1,3 +1,21 @@
+<?php
+// Databaseverbinding ophalen
+include "includes/db.php";
+
+// Alle producten ophalen uit de database
+$producten = $pdo->query("SELECT * FROM producten")->fetchAll();
+
+// Koppel elk database-ID aan het juiste bestand in de map details/
+$links = [
+    1 => "details/ominous.php",
+    2 => "details/hexapod.php",
+    3 => "details/robotarm.php",
+    4 => "details/humanoid.php",
+    5 => "details/marsrover.php",
+    6 => "details/drone.php"
+];
+?>
+
 <!doctype html>
 <html lang="nl">
   <head>
@@ -31,80 +49,24 @@
     </div>
 
     <!-- Producten -->
-        <!-- Producten -->
     <div id="content">
-      <div class="product">
-        <img src="foto/battlebots Ominous.jpg" alt="Ominous Battlebot" />
-        <h2>Ominous Battlebot</h2>
-        <p>Prijs: €799,99</p>
-        <a
-          href="details/ominous.php"
-          onclick="localStorage.setItem('laatsteProduct', this.href)"
-          >Bekijk</a
-        >
-      </div>
+      <?php foreach ($producten as $product) { ?>
 
-      <div class="product">
-        <img src="foto/Hexapod Robot.jpg" alt="Hexapod Robot" />
-        <h2>Hexapod Robot</h2>
-        <p>Prijs: €299,99</p>
-        <a
-          href="details/hexapod.php"
-          onclick="localStorage.setItem('laatsteProduct', this.href)"
-          >Bekijk</a
-        >
-      </div>
+        <div class="product">
+          <img src="foto/<?php echo $product['afbeelding']; ?>" alt="<?php echo $product['naam']; ?>">
+          <h2><?php echo $product['naam']; ?></h2>
+          <p>€ <?php echo number_format($product['prijs'], 2, ',', '.'); ?></p>
+          <a href="<?php echo $links[$product['id']]; ?>">Bekijk robot</a>
+        </div>
 
-      <div class="product">
-        <img src="foto/Robot Arm.jpg" alt="Robot Arm" />
-        <h2>Robot Arm</h2>
-        <p>Prijs: €199,99</p>
-        <a
-          href="details/robotarm.php"
-          onclick="localStorage.setItem('laatsteProduct', this.href)"
-          >Bekijk</a
-        >
-      </div>
-
-      <div class="product">
-        <img src="foto/Humanoid Robot.jpg" alt="Humanoid Robot" />
-        <h2>Humanoid Robot</h2>
-        <p>Prijs: €1499,99</p>
-        <a
-          href="details/humanoid.php"
-          onclick="localStorage.setItem('laatsteProduct', this.href)"
-          >Bekijk</a
-        >
-      </div>
-
-      <div class="product">
-        <img src="foto/Mars Rover.jpg" alt="Mars Rover" />
-        <h2>Mars Rover</h2>
-        <p>Prijs: €599,99</p>
-        <a
-          href="details/Mars Rover.php"
-          onclick="localStorage.setItem('laatsteProduct', this.href)"
-          >Bekijk</a
-        >
-      </div>
-
-      <div class="product">
-        <img src="foto/drone.jpg" alt="Drone" />
-        <h2>Drone</h2>
-        <p>Prijs: €249,99</p>
-        <a
-          href="details/drone.php"
-          onclick="localStorage.setItem('laatsteProduct', this.href)"
-          >Bekijk</a
-        >
-      </div>
+      <?php } ?>
     </div>
 
     <!-- Link naar GLU -->
     <footer id="footer">
       <p>&copy; 2026 Robot Shop</p>
       <p>
-        <a href="https://www.glu.nl" target="_blank"> Bezoek de GLU website </a>
+        <a href="https://glu.nl" target="_blank"> Bezoek de GLU website </a>
       </p>
     </footer>
 
@@ -140,4 +102,3 @@
     </script>
   </body>
 </html>
-
