@@ -4,16 +4,6 @@ include "includes/db.php";
 
 // Alle producten ophalen uit de database
 $producten = $pdo->query("SELECT * FROM producten")->fetchAll();
-
-// Koppel elk database-ID aan het juiste bestand in de map details/
-$links = [
-    1 => "details/ominous.php",
-    2 => "details/hexapod.php",
-    3 => "details/robotarm.php",
-    4 => "details/humanoid.php",
-    5 => "details/marsrover.php",
-    6 => "details/drone.php"
-];
 ?>
 
 <!doctype html>
@@ -53,10 +43,10 @@ $links = [
       <?php foreach ($producten as $product) { ?>
 
         <div class="product">
-          <img src="foto/<?php echo $product['afbeelding']; ?>" alt="<?php echo $product['naam']; ?>">
-          <h2><?php echo $product['naam']; ?></h2>
+          <img src="foto/<?php echo htmlspecialchars($product['afbeelding']); ?>" alt="<?php echo htmlspecialchars($product['naam']); ?>">
+          <h2><?php echo htmlspecialchars($product['naam']); ?></h2>
           <p>€ <?php echo number_format($product['prijs'], 2, ',', '.'); ?></p>
-          <a href="<?php echo $links[$product['id']]; ?>">Bekijk robot</a>
+          <a href="detail.php?id=<?php echo $product['id']; ?>"> Bekijk robot </a>
         </div>
 
       <?php } ?>
@@ -75,7 +65,8 @@ $links = [
       function gaNaarLaatsteProduct() {
         let product = localStorage.getItem("laatsteProduct");
 
-        if (product) {
+        // Controleer of het een geldige link is en niet nog de oude workshop7/details link
+        if (product && !product.includes("/details/")) {
           window.location.href = product;
         } else {
           alert("Je hebt nog geen product bekeken.");
