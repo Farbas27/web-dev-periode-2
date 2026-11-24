@@ -20,19 +20,19 @@
     <div class="detail-container">
       <div class="detail-info">
         <h2>Bestellen: Robot Shop</h2>
+        <form class="formulier" action="bedankt.php" method="post">
 
-        <form class="formulier">
           <!-- Kies een robot -->
           <div class="veld">
             <label for="robot">Kies je robot</label>
-            <select id="robot" name="robot">
-              <option value="ominous">Ominous Battlebot (€799,99)</option>
-              <option value="hexapod">Hexapod Robot (€299,99)</option>
-              <option value="robotarm" selected>Robot Arm (€199,99)</option>
-              <option value="humanoid">Humanoid Robot (€1499,99)</option>
-              <option value="marsrover">Mars Rover (€599,99)</option>
-              <option value="drone">Drone (€249,99)</option>
-            </select>
+            <select id="robot" name="product_id">
+    <option value="1">Ominous Battlebot (€799,99)</option>
+    <option value="2">Hexapod Robot (€299,99)</option>
+    <option value="3">Robot Arm (€199,99)</option>
+    <option value="4">Humanoid Robot (€1499,99)</option>
+    <option value="5">Mars Rover (€599,99)</option>
+    <option value="6">Drone (€249,99)</option>
+</select>
           </div>
 
           <!-- Aantal -->

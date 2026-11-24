@@ -49,7 +49,7 @@ if (!$product) {
         </p>
 
         <div class="detail-acties">
-          <a href="bestellen.php?id=<?php echo $product['id']; ?>" class="btn-bestellen">Bestellen</a>
+          <a href="bestellen.php?id=<?php echo $product['id']; ?>" class="btn-bestellen"> Bestellen </a>
           <a href="index.php" class="btn-terug">← Terug naar overzicht</a>
         </div>
       </div>

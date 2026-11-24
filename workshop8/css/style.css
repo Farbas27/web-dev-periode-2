@@ -330,3 +330,16 @@ input.knop {
   cursor: pointer;
   margin-top: 10px;
 }
+
+.success-box {
+    text-align: center;
+}
+
+.success-box h2 {
+    color: cyan;
+    font-size: 36px;
+}
+
+.success-box p {
+    font-size: 18px;
+}
